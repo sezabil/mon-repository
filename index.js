@@ -3,8 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 //connexion à la bdd
-mongoose.connect("mongodb://localhost/vinted-orion22");
-
+//mongoose.connect("mongodb://localhost/vinted-orion22");
+mongoose.connect(process.env.DATABASE_URL);
 const app = express();
 app.use(express.json());
 
